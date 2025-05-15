@@ -1,0 +1,70 @@
+@function rem($value) {
+    @return calc( $value / 16) * 1rem;
+}
+
+@function vwMobile($val, $width: 390){
+    @return calc( ( $val / ($width / 100) ) ) * 1vw;
+}
+
+@function vwTablet($val, $width: 768){
+    @return calc( ( $val / ($width / 100) ) ) * 1vw;
+}
+
+@function vwDesktop($val, $width: 1920){
+    @return calc( ( $val / ($width / 100) ) ) * 1vw;
+}
+
+@function d($val){
+    @return min( vwDesktop($val),  $val * 1px );
+}
+
+@function m($val){
+    @return vwMobile($val);
+}
+
+@function t($val){
+    @return vwTablet($val);
+}
+
+@function vh($val, $height: 1080){
+    @return calc( 100 * ( $val / $height ) ) * 1vh;
+}
+
+@mixin flex($align: flex-start, $justify: flex-start, $direction: row) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
+@mixin flexCenter($direction: row){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+}
+
+@mixin mobile{
+    @media(max-width: 600px){
+        @content
+    }
+};
+
+@mixin tablet{
+    @media(min-width: 600px) and (max-width: 900px){
+        @content
+    }
+};
+
+@mixin desktop{
+    @media(min-width: 900px){
+        @content
+    }
+};
+
+
+@mixin laptop{
+    @media (min-width: 1000px) and (max-width: 1300px){
+        @content
+    }
+};

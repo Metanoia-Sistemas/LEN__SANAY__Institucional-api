@@ -1,0 +1,57 @@
+@use 'functions' as *;
+@use 'vars' as *;
+
+html, body {
+    *{
+        // color: $preto;
+        // font-family: 'WorkSans', sans-serif;
+        line-height: 1.2;
+        
+        @include desktop{
+            font-size: d(20);
+        }
+
+        @include tablet{
+            font-size: t(16);
+        }
+
+        @include mobile{
+            font-size: m(16);
+        }
+    }
+}
+
+.italic{
+    font-style: italic;
+}
+
+.fw-900{ font-weight: 900; }
+.fw-800{ font-weight: 800; }
+.fw-700{ font-weight: 700; }
+.fw-600{ font-weight: 600; }
+.fw-500{ font-weight: 500; }
+.fw-400{ font-weight: 400; }
+.fw-300{ font-weight: 300; }
+.fw-200{ font-weight: 200; }
+.fw-100{ font-weight: 100; }
+
+.text-left{ text-align: left; }
+.text-center{ text-align: center; }
+.text-right{ text-align: right; }
+
+.uppercase{ text-transform: uppercase; }
+.capitalize{ text-transform: capitalize; }
+
+$fontSizes: 12, 14, 16, 18, 20, 22, 24, 28, 32, 34, 36, 38, 40, 44, 48, 50, 56, 68, 72, 100 ;
+
+@each $i in $fontSizes {
+    .fs-#{$i} { font-size: d( $i ); }
+
+    html{
+        .fsm-#{$i} { 
+            @include mobile{ font-size: m( $i ); }
+            @include tablet{ font-size: t( $i ); }
+        }
+    }
+
+}

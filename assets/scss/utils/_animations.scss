@@ -1,0 +1,74 @@
+@use 'functions' as *;
+@use 'vars' as *;
+
+// ======= pagina-slide ===========
+.pagina-slide-enter-active,
+.pagina-slide-leave-active {
+    transition: all $transicaoPagina;
+    transform: translateX(0);
+}
+.pagina-slide-enter-from{
+    transform: translateX(100%);
+}
+.pagina-slide-leave-to {
+    transform: translateX(-100%);
+}
+// ======= //pagina-slide ===========
+
+
+// ======= pagina-blur ===========
+.pagina-blur-enter-active,
+.pagina-blur-leave-active {
+    transition: all $transicaoPagina;
+    filter: blur(0);
+}
+.pagina-blur-enter-from,
+.pagina-blur-leave-to {
+    opacity: 0;
+    filter: blur(20px);
+}
+// ======= pagina-blur ===========
+
+// ======= pagina-blur ===========
+.pagina-opacity-enter-active,
+.pagina-opacity-leave-active {
+    transition: all $transicaoPagina;
+}
+.pagina-opacity-enter-from,
+.pagina-opacity-leave-to {
+    opacity: 0;
+}
+// ======= pagina-blur ===========
+
+
+.hover-right{
+    transition: all .3s;
+
+    &:hover{
+        transform: translateX(5px);
+    }
+}
+
+.hover-left{
+    transition: all .3s;
+
+    &:hover{
+        transform: translateX(-5px);
+    }
+}
+
+.hover-top{
+    transition: all .3s;
+
+    &:hover{
+        transform: translateY(-5px);
+    }
+}
+
+.hover-bottom{
+    transition: all .3s;
+
+    &:hover{
+        transform: translateY(5px);
+    }
+}
