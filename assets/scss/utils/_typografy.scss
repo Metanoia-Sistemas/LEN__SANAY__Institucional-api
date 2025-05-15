@@ -2,9 +2,11 @@
 @use 'vars' as *;
 
 html, body {
+    color: $preto;
+
     *{
-        // color: $preto;
-        // font-family: 'WorkSans', sans-serif;
+        color: inherit;
+        font-family: 'DMSans', sans-serif;
         line-height: 1.2;
         
         @include desktop{
@@ -42,7 +44,7 @@ html, body {
 .uppercase{ text-transform: uppercase; }
 .capitalize{ text-transform: capitalize; }
 
-$fontSizes: 12, 14, 16, 18, 20, 22, 24, 28, 32, 34, 36, 38, 40, 44, 48, 50, 56, 68, 72, 100 ;
+$fontSizes: 12, 14, 18, 20, 24, 32, 40, 52;
 
 @each $i in $fontSizes {
     .fs-#{$i} { font-size: d( $i ); }
@@ -55,3 +57,12 @@ $fontSizes: 12, 14, 16, 18, 20, 22, 24, 28, 32, 34, 36, 38, 40, 44, 48, 50, 56, 
     }
 
 }
+
+.verdeTerreno, .verde-terreno{ color: $verdeTerreno; }
+.verdeInovacao, .verde-inovacao{ color: $verdeInovacao; }
+.cinzaUrbano, .cinza-urbano{ color: $cinzaUrbano; }
+.cinzaSolidez, .cinza-solidez{ color: $cinzaSolidez; }
+.azulSkyline, .azul-skyline{ color: $azulSkyline; }
+.offWhite, .off-white{ color: $offWhite; }
+.branco, .branco{ color: $branco; }
+.preto, .preto{ color: $preto; }
