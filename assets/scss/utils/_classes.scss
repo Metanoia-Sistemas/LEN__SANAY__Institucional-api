@@ -32,7 +32,7 @@ section{
 .container {
     width: 100%;
     margin: 0 auto;
-    
+
     @include mobile{
         max-width: 100%;
         padding: 0 m(20);
@@ -44,8 +44,23 @@ section{
     }
 
     @include desktop{
-        max-width: d(1440);
+        max-width: d(1700);
+
+        &.full{
+            max-width: d(1920);
+        }
     }
+}
+
+.hide-desktop{
+    @include desktop{
+        display: none;
+    }
+}
+
+.hide-mobile{
+    @include mobile{ display: none;} 
+    @include tablet{ display: none;}
 }
 
 .container-img{
@@ -79,8 +94,8 @@ strong, b{
     color: inherit;
 }
 
-$margins: 20, 30, 50, 70, 100, 200, 300, 400;
-$paddings: 20, 30, 50, 70, 100, 200, 300, 400;
+$margins: 20, 25, 30, 50, 70, 100, 200, 300, 400;
+$paddings: 20, 25, 30, 50, 70, 100, 200, 300, 400;
 
 @each $i in $margins {
     .my-#{$i} { margin-block: d( $i ); }

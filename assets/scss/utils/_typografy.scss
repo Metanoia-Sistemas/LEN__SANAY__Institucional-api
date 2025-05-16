@@ -4,22 +4,23 @@
 html, body {
     color: $preto;
 
+    @include desktop{
+        font-size: d(20);
+    }
+
+    @include tablet{
+        font-size: t(16);
+    }
+
+    @include mobile{
+        font-size: m(16);
+    }
+
     *{
         color: inherit;
+        font-size: inherit;
         font-family: 'DMSans', sans-serif;
         line-height: 1.2;
-        
-        @include desktop{
-            font-size: d(20);
-        }
-
-        @include tablet{
-            font-size: t(16);
-        }
-
-        @include mobile{
-            font-size: m(16);
-        }
     }
 }
 

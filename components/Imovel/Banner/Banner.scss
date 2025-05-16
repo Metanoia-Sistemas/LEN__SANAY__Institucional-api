@@ -1,0 +1,54 @@
+.banner-imovel{
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+
+    .bg{
+        picture{
+            filter: brightness(0.7);
+        }
+    }
+
+    .container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .nome-imovel{
+            line-height: 1.4;
+        }
+
+        .descricao{
+            @include flex();
+        }
+    }
+
+    @include desktop{
+        .container{
+            width: 100%;
+            @include flex(center, space-between);
+
+            .descricao{
+                gap: d(32);
+            }
+        }
+    }
+
+    @include mobile{
+        .container{
+            .descricao{
+                gap: m(15);
+            }
+        }
+    }
+
+    @include tablet{
+        .container{
+            .descricao{
+                gap: t(15);
+            }
+        }
+    }
+}
