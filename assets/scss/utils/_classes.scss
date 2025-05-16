@@ -78,3 +78,62 @@ strong, b{
     font-weight: 600;
     color: inherit;
 }
+
+$margins: 20, 30, 50, 70, 100, 200, 300, 400;
+$paddings: 20, 30, 50, 70, 100, 200, 300, 400;
+
+@each $i in $margins {
+    .my-#{$i} { margin-block: d( $i ); }
+    .mx-#{$i} { margin-inline: d( $i ); }
+    .mt-#{$i} { margin-top: d( $i ); }
+    .mb-#{$i} { margin-bottom: d( $i ); }
+
+    html{
+        .mym-#{$i} { 
+            @include mobile{ margin-block: m( $i ); }
+            @include tablet{ margin-block: t( $i ); }
+        }
+        .mxm-#{$i} { 
+            @include mobile{ margin-inline: m( $i ); }
+            @include tablet{ margin-inline: t( $i ); }
+        }
+        .mtm-#{$i} { 
+            @include mobile{ margin-top: m( $i ); }
+            @include tablet{ margin-top: t( $i ); }
+        }
+        .mbm-#{$i} { 
+            @include mobile{ margin-bottom: m( $i ); }
+            @include tablet{ margin-bottom: t( $i ); }
+        }
+    }
+}
+
+@each $i in $paddings {
+    .py-#{$i} { padding-block: d( $i ); }
+    .px-#{$i} { padding-inline: d( $i ); }
+    .pt-#{$i} { padding-top: d( $i ); }
+    .pb-#{$i} { padding-bottom: d( $i ); }
+
+    html{
+        .pym-#{$i} { 
+            @include mobile{ padding-block: m( $i ); }
+            @include tablet{ padding-block: t( $i ); }
+        }
+        .pxm-#{$i} { 
+            @include mobile{ padding-inline: m( $i ); }
+            @include tablet{ padding-inline: t( $i ); }
+        }
+        .ptm-#{$i} { 
+            @include mobile{ padding-top: m( $i ); }
+            @include tablet{ padding-top: t( $i ); }
+        }
+        .pbm-#{$i} { 
+            @include mobile{ padding-bottom: m( $i ); }
+            @include tablet{ padding-bottom: t( $i ); }
+        }
+    }
+}
+
+.d-block{
+    display: block;
+}

@@ -9,6 +9,10 @@
         <h1 class="fs-52 fw-700">Sanay</h1>
         <h1 class="fs-52 fw-800">Sanay</h1>
         <h1 class="fs-52 fw-900">Sanay</h1>
+
+        <NuxtLink to="/imovel/aaaa" class="fs-24 my-30 d-block verde-terreno">
+            Interna Imovel
+        </NuxtLink>
     </div>
 </template>
 
