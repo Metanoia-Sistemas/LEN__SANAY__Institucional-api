@@ -2,6 +2,7 @@
     <div>
         <ImovelBanner />
         <ImovelLinksRapidos />
+        <ImovelApresentacao />
     </div>
 </template>
 

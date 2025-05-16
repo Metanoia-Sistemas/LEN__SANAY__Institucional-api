@@ -29,7 +29,7 @@
 
             <div class="right hide-mobile">
                 <picture>
-                    <img :src="generatePlaceholder('320x140', 3)" alt="">
+                    <img :src="generatePlaceholder('320x140', 3)" alt="" loading="lazy">
                 </picture>
             </div>
         </div>

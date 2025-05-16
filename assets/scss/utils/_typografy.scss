@@ -9,18 +9,18 @@ html, body {
     }
 
     @include tablet{
-        font-size: t(16);
+        font-size: t(18);
     }
 
     @include mobile{
-        font-size: m(16);
+        font-size: m(18);
     }
 
     *{
         color: inherit;
         font-size: inherit;
         font-family: 'DMSans', sans-serif;
-        line-height: 1.2;
+        line-height: 1.4;
     }
 }
 
