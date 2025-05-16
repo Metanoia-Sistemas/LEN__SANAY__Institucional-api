@@ -1,0 +1,45 @@
+.links-rapidos-imovel{
+    background-color: $cinzaUrbano;
+
+    .container{
+        @include flex(center, space-between);
+    }
+
+    @include mobile{
+        .container{
+            gap: m(40);
+            overflow: auto;
+
+            a{
+                color: #fff;
+                min-width: max-content;
+                text-underline-offset: m(10);
+
+                &:hover{
+                    color: $verdeInovacao;
+                    text-decoration: underline;
+                }
+
+            }
+        }
+    }
+
+    @include tablet{
+        .container{
+            gap: t(40);
+            overflow: auto;
+
+            a{
+                color: #fff;
+                min-width: max-content;
+                text-underline-offset: t(10);
+
+                &:hover{
+                    color: $verdeInovacao;
+                    text-decoration: underline;
+                }
+
+            }
+        }
+    }
+}

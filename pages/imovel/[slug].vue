@@ -1,6 +1,7 @@
 <template>
     <div>
         <ImovelBanner />
+        <ImovelLinksRapidos />
     </div>
 </template>
 
