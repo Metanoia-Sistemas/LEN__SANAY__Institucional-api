@@ -45,7 +45,7 @@ html, body {
 .uppercase{ text-transform: uppercase; }
 .capitalize{ text-transform: capitalize; }
 
-$fontSizes: 12, 14, 18, 20, 24, 32, 40, 52;
+$fontSizes: 12, 14, 18, 20, 24, 32, 40, 52, 72;
 
 @each $i in $fontSizes {
     .fs-#{$i} { font-size: d( $i ); }

@@ -15,4 +15,4 @@
 
 </script>
 
-<style lang="scss" src="./LinksRapidos.scss"></style>
+<style lang="scss" src="./LinksRapidos.scss" scoped></style>

@@ -72,4 +72,4 @@
 
 </script>
 
-<style lang="scss" src="./Apresentacao.scss"></style>
+<style lang="scss" src="./Apresentacao.scss" scoped></style>

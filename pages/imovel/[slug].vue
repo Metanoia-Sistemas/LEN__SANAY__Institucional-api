@@ -3,6 +3,7 @@
         <ImovelBanner />
         <ImovelLinksRapidos />
         <ImovelApresentacao />
+        <ImovelGaleria />
     </div>
 </template>
 
